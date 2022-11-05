@@ -1,7 +1,7 @@
 <?php $title = "connexion"; ?>
 <?php ob_start(); ?>
 
-<form action="index.php" method = "post">
+<form action="index.php" method="post">
     <div>
         <label for="name">Nom</label>
         <input type="text" name="name" id="name">
@@ -28,6 +28,7 @@
     
     <div>
         <input type="submit" value="Inscription">
+        <a href="index.php">Retour</a>
     </div>
 </form>
 

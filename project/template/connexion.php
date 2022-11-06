@@ -1,19 +1,14 @@
 <?php $title = "Connexion"; ?>
 <?php ob_start(); ?>
 
-<form action="index.php">
+<form action="index.php?action=identities" method='post'>
     <div>
-        <label for="name">Nom</label>
-        <input type="text" name="name" id="name">
+        <label for="identities">identité</label>
+        <input type="text" name="identities" id="identities">
     </div>
 
     <div>
-        <label for="second_name">Post-nom</label>
-        <input type="text" name="second_name" id="">
-    </div>
-
-    <div>
-        <label for="password"></label>
+        <label for="password">Mot de passe</label>
         <input type="password" name="password" id="password">
     </div>
 

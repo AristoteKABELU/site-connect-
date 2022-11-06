@@ -1,5 +1,6 @@
 <?php
-function inscription()
+
+function inscription():void
 {
     require('template/inscription.php');
 }

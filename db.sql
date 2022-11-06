@@ -7,5 +7,8 @@ CREATE TABLE IF NOT EXISTS `t_users`(
     `name` VARCHAR(30),
     `second_name` VARCHAR(30),
     `first_name` VARCHAR(30),
-    `birthday` DATE
+    `birthday` DATE,
+    `password` VARCHAR(32),
+    `adress_user` VARCHAR(60),
+    `date_creation` DATETIME
 );

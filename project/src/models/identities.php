@@ -12,10 +12,14 @@ class Identitie
 
     public function register_user($name, $second_name, $first_name, $password, $birthday):bool
     {
-        $statement = $this->connection->getConnection()->prepare('INSERT INTO `t_user`(name, second_name, first_name, password, birthday)  VALUE(?, ?, ?, ?, ?)');
+        $adress_user = $first_name.$name;
+        $this->connection = new DatabaseConnection();
+        $statement = $this->connection->getConnection()->prepare(
+            'INSERT INTO `t_users`(`name`, `second_name`, `first_name`, `password`, `birthday`, `adress_user`, `date_creation`)  VALUE(?, ?, ?, ?, ?, ?, now())');
 
-        $affectedLines = $statement->execute([$name, $second_name, $first_name, $password, $birthday]);
+        $affectedLines = $statement->execute([strtoupper($name), strtoupper($second_name), strtoupper($first_name), $password, $birthday, strtoupper($adress_user)]);
 
         return ($affectedLines > 0);
     }
+
 }

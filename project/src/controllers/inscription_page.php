@@ -1,6 +1,6 @@
 <?php
 
-function inscription():void
+function inscription_page():void
 {
     require('template/inscription.php');
 }

@@ -12,6 +12,14 @@ class Register
 {
     function execute(array $input):void
     {
+        $name = null;
+        $second_name = null;
+        $first_name = null;
+
+        if($name == null || $second_name == null || $first_name == null){
+            throw new \Exception("Les données sont insuffisantes!");
+        }
+
         $name = $input['name'];
         $second_name = $input['second_name'];
         $first_name = $input['first_name'];
@@ -19,8 +27,6 @@ class Register
         $birthday = $input['birthday'];
 
         $inscription = new Identitie();
-        $inscription->connexion = new DatabaseConnection();
-
         $success = $inscription->register_user($name, $second_name, $first_name, $password, $birthday);
 
         if(!$success){

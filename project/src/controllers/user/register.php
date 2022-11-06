@@ -1,11 +1,11 @@
 <?php
 
-namespace Application\src\controllers\inscription;
+namespace Application\src\controllers\user\register;
 
-require_once('src/models/identities.php');
+require_once('src/models/user.php');
 require_once('src/lib/database.php');
 
-use Application\src\models\Identitie\Identitie;
+use Application\src\models\UserIdentitie\UserIdentitie;
 use Application\Lib\Database\DatabaseConnection;
 
 class Register
@@ -16,7 +16,7 @@ class Register
         $second_name = null;
         $first_name = null;
 
-        if($name == null || $second_name == null || $first_name == null){
+        if($input['name'] == null || $input['second_name'] == null || $input['first_name'] == null){
             throw new \Exception("Les données sont insuffisantes!");
         }
 
@@ -26,8 +26,8 @@ class Register
         $password = $input['password'];
         $birthday = $input['birthday'];
 
-        $inscription = new Identitie();
-        $success = $inscription->register_user($name, $second_name, $first_name, $password, $birthday);
+        $register = new UserIdentitie();
+        $success = $register->register_user($name, $second_name, $first_name, $password, $birthday);
 
         if(!$success){
             throw new \Exception("Enregistrement echoué !");

@@ -1,7 +1,7 @@
 <?php $title = "connexion"; ?>
 <?php ob_start(); ?>
 
-<form action="index.php?action=inscription" method="post">
+<form action="index.php?action=register" method="post">
     <div>
         <label for="name">Nom</label>
         <input type="text" name="name" id="name">

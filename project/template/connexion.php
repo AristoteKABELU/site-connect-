@@ -1,10 +1,10 @@
 <?php $title = "Connexion"; ?>
 <?php ob_start(); ?>
 
-<form action="index.php?action=identities" method='post'>
+<form action="index.php?action=user" method='post'>
     <div>
-        <label for="identities">identité</label>
-        <input type="text" name="identities" id="identities">
+        <label for="user">identité</label>
+        <input type="text" name="user" id="user">
     </div>
 
     <div>

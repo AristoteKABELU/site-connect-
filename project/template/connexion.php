@@ -3,8 +3,8 @@
 
 <form action="index.php?action=user" method='post'>
     <div>
-        <label for="user">identité</label>
-        <input type="text" name="user" id="user">
+        <label for="user_name">identité</label>
+        <input type="text" name="user_name" id="user_name">
     </div>
 
     <div>

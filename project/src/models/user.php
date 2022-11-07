@@ -38,12 +38,17 @@ class UserIdentitie
         $this->connection = new DatabaseConnection();
         $statement = $this->connection->getConnection()->prepare(
             'SELECT `name`, `first_name`, `second_name`, `birthday`
-             INTO `t_users`
-             WHERE `user_name`= ? AND `password` = ?');
+            FROM `t_users`
+            WHERE `adress_user`= ? AND `password` = ?');
 
-        $user = $statement->execute([$user_name, $password]);
+        $statement->execute([strtoupper($user_name), $password]);
         $row = $statement->fetch();
-        
+    
+        if($row == null){
+            throw new \Exception("Vous n'etes Pas identifier");
+            
+        }
+
         $user_identitie = new User();
         $user_identitie->name = $row['name'];
         $user_identitie->second_name = $row['second_name'];

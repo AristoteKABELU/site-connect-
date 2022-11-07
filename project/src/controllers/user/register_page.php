@@ -1,6 +1,11 @@
 <?php
 
-function register_page():void
+namespace Application\src\controllers\user;
+
+class Register_page
 {
-    require('template/register.php');
+    function execute():void
+    {
+        require('template/register.php');
+    }
 }

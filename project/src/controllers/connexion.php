@@ -1,5 +1,11 @@
 <?php
-function connexion()
+
+namespace Application\src\controllers\connexion;
+
+class Connexion
 {
-    require('template/connexion.php');
+    function execute()
+    {
+        require('template/connexion.php');
+    }
 }

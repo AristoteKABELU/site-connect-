@@ -1,5 +1,10 @@
 <?php
 
-function homepage(){
-    require('template/homepage.php');
+namespace Application\src\controllers\homepage;
+
+class Homepage
+{
+    function execute(){
+        require('template/homepage.php');
+    }
 }

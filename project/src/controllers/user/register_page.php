@@ -6,6 +6,6 @@ class Register_page
 {
     function execute():void
     {
-        require('template/register.php');
+        require('template/user/register.php');
     }
 }

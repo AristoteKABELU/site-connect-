@@ -24,7 +24,7 @@ class User
         $user = new UserIdentitie();
         $identitie =  $user->get_user($user_name, $password);
         
-        require('template/user.php');
+        require('template/user/user.php');
 
     }
 }

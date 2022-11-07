@@ -33,4 +33,4 @@
 </form>
 
 <?php $content = ob_get_clean(); ?>
-<?php require('Layout/layout.php'); ?>
+<?php require('template/Layout/layout.php'); ?>
